@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+/* global */
 
 body {
     font-family: 'Lato', sans-serif;
@@ -25,6 +26,13 @@ body {
 .sub-container {
     padding: 5rem 6rem;
     max-width: 1000px;
+}
+
+@media screen and (max-width: 768px) { 
+    .sub-container {
+    padding: 5rem 6rem;
+    max-width: 768px;
+    }
 }
 .navbar {
     position: fixed;
@@ -148,7 +156,7 @@ section#home .CTA p {
 }
 section#home .CTA .button  {
     padding: 10px 30px;
-    background-color: #0575E6;
+    background-color: #2d5986;;
     border: none;
     border-radius: 5px;
     font-family: 'Lato', sans-serif;
@@ -166,10 +174,28 @@ section#home .CTA .button:hover{
     transition: .25s;
     /* font-weight: 400; */
 }
+
+@media screen and (max-width: 768px) {
+    section#home {
+        background: url(img/guitar2darkcropped2.jpg) no-repeat left center/cover;
+    }
+    section#home h1 {
+        font-size: 6rem;
+    }
+    
+    section#home h2 {
+        font-size: 2.5rem;
+        font-weight: normal;
+        width: 60%;
+    }
+    section#home p {
+        color: white;
+        font-size: 2rem;
+    }
+}
 /* Lessons Section */
 
 section#lessons {
-    /* background-color: #34568b; */
     background-color: #2d5986;
     display: flex;
     flex-direction: column;
@@ -253,11 +279,50 @@ section#lessons .subtitle p {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 768px) { 
+    section#lessons h1 {
+        font-size: 3.5rem;
+        margin-top: 2rem;
+    }
+    .box-1 {
+        align-items: center;
+        width: 768px;
+        margin: 2rem 2rem;
+    }
+    .box-1 .text {
+        flex-basis: 100%;
+        padding-right: 4rem;
+    }
+    .box-1 .lessons-image {
+        width: 100%;
+    }
+    .box-1 .lessons-image img {
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+        width: 90%;
+    }
+    .box-2 {
+        align-items: center;
+        width: 768px;
+        margin: 2rem 2rem;
+    }
+    .box-2 .text {
+        flex-basis: 100%;
+        padding-right: 0rem;
+    }
+    .box-2 .lessons-image {
+        width: 100%;
+        padding-right: 4rem;
+    }
+    
+    .box-2 .lessons-image img {
+        width: 100%;
+    }
+}
 
 /* About section */
 
 section#about {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,7 +335,7 @@ section#about h1 {
     color: #3c3c3b;
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 section#about p {
@@ -312,30 +377,60 @@ section#about::after {
     -ms-transform: skewY(3deg);
 }
 
+@media screen and (max-width: 768px) {
+    section#about {
+        justify-content: flex-start;
+        margin-bottom: 0;
+        position: relative;
+    }
+    
+    section#about h1 {
+        color: #3c3c3b;
+        text-align: center;
+        font-size: 3rem;
+        margin: 1rem 0 3 rem 0;
+    }
+    
+    section#about p {
+        padding: 0 8rem;
+        color: #808b95;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .about-box {
+        flex-direction: column;
+        width: 768px;
+    }
+    
+    .about-box .heropic {
+        padding-right: 0;
+        margin-bottom: 2rem;
+        align-self: center;
+    }
+}    
 /* Testimonial section */
 
 section#testimonials {
-    height: 100vh;
-    background:linear-gradient(-120deg, #021B79, #0575E6, #205E9B);
+    background-color: #2d5986;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5rem;
 }
 
 section#testimonials h1 {
     text-align: center;
     font-size: 3rem;
     color: white;
-    margin-bottom: 2rem;
- 
+    margin: 2rem 0;
 }
 
 section#testimonials q {
     color: RGBA(255,255,255,0.69);
     font-style: italic;
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
+    margin: 2rem 0;
+    padding: 0 4rem;
     transition: .5s;
 }
 
@@ -356,6 +451,7 @@ section#testimonials .row {
 
 section#testimonials .quote1 {
     height: 300px;
+    width: 600px;
     margin-right: 1rem;
     background-image: url(img/parents/1.jpg);
     background-position: center;
@@ -363,22 +459,26 @@ section#testimonials .quote1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    align-items: center;
+    overflow: hidden;
 }
 
 
 section#testimonials .quote2 {
     height: 300px;
+    width: 383px;
     background-image: url(img/parents/2.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 section#testimonials .quote3 {
     height: 300px;
+    width: 383px;
     margin-right: 1rem;
     background-image: url(img/parents/3.jpg);
     background-position: center;
@@ -386,16 +486,19 @@ section#testimonials .quote3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 section#testimonials .quote4 {
     height: 300px;
+    width: 600px;
     background-image: url(img/parents/4.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 section#testimonials .quote1:hover,
@@ -412,6 +515,115 @@ section#testimonials .quote4:hover q {
     transform: scale(1.05);
     color: white;
     transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+    section#testimonials {
+        background-color: #2d5986;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+    
+    section#testimonials h1 {
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+        margin: 2rem 0;
+    }
+    
+    section#testimonials q {
+        color: RGBA(255,255,255,0.69);
+        font-style: italic;
+        text-align: center;
+        margin: 2rem 0;
+        padding: 0 4rem;
+        transition: .5s;
+    }
+    
+    section#testimonials h2 {
+        color: white;
+        text-align: center;
+    }
+    
+    section#testimonials p {
+        color: RGBA(255,255,255,0.69);
+        text-align: center;
+    }
+    
+    section#testimonials .row {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    
+    section#testimonials .quote1 {
+        height: 300px;
+        width: 600px;
+        margin-right: 1rem;
+        background-image: url(img/parents/1.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    
+    section#testimonials .quote2 {
+        height: 300px;
+        width: 383px;
+        background-image: url(img/parents/2.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    section#testimonials .quote3 {
+        height: 300px;
+        width: 383px;
+        margin-right: 1rem;
+        background-image: url(img/parents/3.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    section#testimonials .quote4 {
+        height: 300px;
+        width: 600px;
+        background-image: url(img/parents/4.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    section#testimonials .quote1:hover,
+    section#testimonials .quote2:hover,
+    section#testimonials .quote3:hover,
+    section#testimonials .quote4:hover {
+        cursor: pointer;
+    }
+    
+    section#testimonials .quote1:hover q,
+    section#testimonials .quote2:hover q,
+    section#testimonials .quote3:hover q,
+    section#testimonials .quote4:hover q {
+        transform: scale(1.05);
+        color: white;
+        transition: .5s;
+    }
 }
 
 /* contact section */
