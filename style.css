@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.sub-container {
+    padding: 5rem 6rem;
+    max-width: 1000px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: skyblue;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* Animations */ 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Home Section  */
+
+section#home {
+    height: 100vh;
+    background: url(img/guitar2darkcropped2.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+section#home h1 {
+    color: white;
+    font-size: 4rem;
+    animation: slideInFromLeft 1s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+section#home h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+    width: 60%;
+    animation: slideInFromRight 1s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+section#home p {
+    color: white;
+    font-size: 1.5rem;
+    animation: fadeIn 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+}
+
+section#home .CTA {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 20%;
+   animation: fadeIn 1s;
+   animation-delay: 2s;
+   animation-fill-mode: backwards;
+}
+
+section#home .CTA p {
+    margin-bottom: 2rem;
+}
+section#home .CTA .button  {
+    padding: 10px 30px;
+    background-color: #0575E6;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: .25s;
+}
+
+section#home .CTA .button:hover{
+    padding: 9px 28px;
+    transition: .25s;
+    /* font-weight: 400; */
+}
+/* Lessons Section */
+
+section#lessons {
+    background:linear-gradient(-120deg, #021B79, #0575E6, #205E9B);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+section#lessons h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section#lessons h2, p {
+    margin-top: 0;
+}
+
+section#lessons h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+section#lessons p {
+    color: RGBA(255,255,255,0.69);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+section#lessons .subtitle p {
+    text-align: center;
+    font-size: 2rem;
+}
+.box-1 {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin: 6rem 0;
+}
+
+.box-1 .text {
+    flex-basis: 80%;
+    align-self: center;
+}
+
+.box-1 .lessons-image {
+    width: 100%;
+}
+.box-1 .lessons-image img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box-2 {
+    display: flex;
+    width: 1000px;
+    margin: 6rem 0;
+}
+
+.box-2 .text {
+    margin-right: 4rem;
+    flex-basis: 80%;
+    align-self: center;
+}
+
+.box-2 .text p {
+    text-align: right;
+}
+
+.box-2 .text h2 {
+    text-align: right;
+    color: white;
+}
+.box-2 .lessons-image {
+    width: 100%;
+}
+
+.box-2 .lessons-image img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* About section */
+
+section#about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+section#about h1 {
+    color: #3c3c3b;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+section#about p {
+    color: #808b95;
+    font-size: 1.25rem;
+}
+.about-box {
+    display: flex;
+    width: 900px;
+}
+
+.about-box .heropic {
+    padding-right: 2rem;
+}
+
+.about-box .heropic img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-box .herotext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#about::before,
+section#about::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    top: -30px;
+    right: 0;
+    left: 0;
+    background: white;
+    transform: skewY(3deg);
+    -webkit-transform: skewY(3deg);
+    -moz-transform: skewY(3deg);
+    -ms-transform: skewY(3deg);
+}
+
+/* Testimonial section */
+
+section#testimonials {
+    height: 100vh;
+    background:linear-gradient(-120deg, #021B79, #0575E6, #205E9B);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#testimonials h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+ 
+}
+
+section#testimonials q {
+    color: RGBA(255,255,255,0.69);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    transition: .5s;
+}
+
+section#testimonials h2 {
+    color: white;
+    text-align: center;
+}
+
+section#testimonials p {
+    color: RGBA(255,255,255,0.69);
+    text-align: center;
+}
+
+section#testimonials .row {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+section#testimonials .quote1 {
+    height: 300px;
+    margin-right: 1rem;
+    background-image: url(img/parents/1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+section#testimonials .quote2 {
+    height: 300px;
+    background-image: url(img/parents/2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#testimonials .quote3 {
+    height: 300px;
+    margin-right: 1rem;
+    background-image: url(img/parents/3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#testimonials .quote4 {
+    height: 300px;
+    background-image: url(img/parents/4.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#testimonials .quote1:hover,
+section#testimonials .quote2:hover,
+section#testimonials .quote3:hover,
+section#testimonials .quote4:hover {
+    cursor: pointer;
+}
+
+section#testimonials .quote1:hover q,
+section#testimonials .quote2:hover q,
+section#testimonials .quote3:hover q,
+section#testimonials .quote4:hover q {
+    transform: scale(1.05);
+    color: white;
+    transition: .5s;
+}
+
+/* contact section */
+
+
+section#contact {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/contact.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+section#contact h1 {
+    color: white; 
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+section#contact h2 { 
+   color: white;
+   font-size: 1.5rem;
+   font-weight: normal;
+}
+
+section#contact .contactbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem ;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5) ;
+}
+
+section#contact .contact-info {
+    flex-basis: 50%;
+    padding: 1rem;
+}
+
+section#contact .contact-info i {
+    padding: 0 1rem;
+    color: white;
+}
+
+section#contact .contact-info p {
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+section#contact .contact-info .phone, .email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+section#contact .contact-message {
+    padding: 1rem;
+    flex-basis: 30%;
+}
+
+section#contact .contact-message form {
+    display: flex;
+    flex-direction: column;
+}
+
+section#contact .contact-message .inputbox {
+    margin-bottom: 1rem;
+}
+section#contact .contact-message .inputbox p {
+    color: white;
+}
+
+section#contact .contact-message input, textarea {
+    font-size: 1rem;
+    width: 100%;
+    padding: .5em;
+    margin: .25em 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+
+section#contact .contact-message textarea {
+    margin-top: 1rem;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+section#contact .contact-message input:focus {
+    box-shadow: 0px 0px 16px #1DA1F2;
+    transition: .25s;
+} 
+
+section#contact .contact-message textarea:focus {
+    box-shadow: 0px 0px 16px #1DA1F2;
+    transition: .25s;
+} 
+
+section#contact .contact-message input[type="submit"] {
+    width: 100px;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    /* padding: 10px 15px; */
+    font-family: inherit;
+    font-size: inherit;
+    transition: .5s;
+}
+
+section#contact .contact-message input[type="submit"]:hover {
+    background: white;
+    color: black;
+    transition: .5s;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    padding: .5rem 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+
+}

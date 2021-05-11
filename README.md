@@ -1,2 +1,2 @@
 # EtanGuitar
-Website for Guitar Instructor Etan Haziza
+Website for guitar instructor Etan Haziza
