@@ -323,6 +323,7 @@ section#lessons .subtitle p {
 /* About section */
 
 section#about {
+    background-color: #fceea7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,7 +340,7 @@ section#about h1 {
 }
 
 section#about p {
-    color: #808b95;
+    color: #3c3c3b;
     font-size: 1.25rem;
 }
 .about-box {
@@ -370,7 +371,7 @@ section#about::after {
     top: -30px;
     right: 0;
     left: 0;
-    background: white;
+    background: #fceea7;
     transform: skewY(3deg);
     -webkit-transform: skewY(3deg);
     -moz-transform: skewY(3deg);
@@ -393,7 +394,7 @@ section#about::after {
     
     section#about p {
         padding: 0 8rem;
-        color: #808b95;
+        color: #3c3c3b;
         font-size: 1.25rem;
         text-align: center;
     }
@@ -422,31 +423,35 @@ section#testimonials h1 {
     text-align: center;
     font-size: 3rem;
     color: white;
-    margin: 2rem 0;
+    padding: 2rem 0 5rem 0;
 }
 
 section#testimonials q {
+    quotes: "“" "”" "‘" "’";
     color: RGBA(255,255,255,0.69);
     font-style: italic;
+    font-size: 1.15rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
     padding: 0 4rem;
     transition: .5s;
-}
-
-section#testimonials h2 {
-    color: white;
-    text-align: center;
 }
 
 section#testimonials p {
     color: RGBA(255,255,255,0.69);
     text-align: center;
+    font-size: 1.5rem;
 }
 
 section#testimonials .row {
     display: flex;
     margin-bottom: 1rem;
+}
+
+section#testimonials .row span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
 }
 
 section#testimonials .quote1 {
@@ -512,122 +517,44 @@ section#testimonials .quote1:hover q,
 section#testimonials .quote2:hover q,
 section#testimonials .quote3:hover q,
 section#testimonials .quote4:hover q {
-    transform: scale(1.05);
+    transform: scale(1.02);
     color: white;
     transition: .5s;
 }
 
 @media screen and (max-width: 768px) {
     section#testimonials {
-        background-color: #2d5986;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 5rem;
+        padding: 0 5rem 0rem 1rem;
     }
-    
-    section#testimonials h1 {
-        text-align: center;
-        font-size: 3rem;
-        color: white;
-        margin: 2rem 0;
-    }
-    
     section#testimonials q {
-        color: RGBA(255,255,255,0.69);
-        font-style: italic;
-        text-align: center;
-        margin: 2rem 0;
-        padding: 0 4rem;
-        transition: .5s;
-    }
-    
-    section#testimonials h2 {
+        font-size: 1rem;
+        padding: 0rem 2rem;
         color: white;
-        text-align: center;
     }
-    
     section#testimonials p {
-        color: RGBA(255,255,255,0.69);
-        text-align: center;
+        font-size: 1.25rem;
     }
-    
-    section#testimonials .row {
-        display: flex;
-        margin-bottom: 1rem;
-    }
-    
     section#testimonials .quote1 {
-        height: 300px;
-        width: 600px;
-        margin-right: 1rem;
-        background-image: url(img/parents/1.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        height: 350px;
     }
-    
-    
     section#testimonials .quote2 {
-        height: 300px;
-        width: 383px;
-        background-image: url(img/parents/2.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
+        height: 350px;
+        margin-right: 2rem;
     }
-    
     section#testimonials .quote3 {
-        height: 300px;
-        width: 383px;
-        margin-right: 1rem;
-        background-image: url(img/parents/3.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
+        height: 350px;
     }
-    
     section#testimonials .quote4 {
-        height: 300px;
-        width: 600px;
-        background-image: url(img/parents/4.jpg);
-        background-position: center;
-        background-size: cover;
+        margin-right: 2rem;
+        height: 350px;
+    }
+    section#testimonials .row:last-child {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    section#testimonials .quote1:hover,
-    section#testimonials .quote2:hover,
-    section#testimonials .quote3:hover,
-    section#testimonials .quote4:hover {
-        cursor: pointer;
-    }
-    
-    section#testimonials .quote1:hover q,
-    section#testimonials .quote2:hover q,
-    section#testimonials .quote3:hover q,
-    section#testimonials .quote4:hover q {
-        transform: scale(1.05);
-        color: white;
-        transition: .5s;
+        margin-bottom: 4rem;
     }
 }
 
 /* contact section */
-
 
 section#contact {
     height: 100vh;
@@ -658,7 +585,7 @@ section#contact .contactbox {
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 2rem 0 1rem ;
+    margin: 2rem 0 1rem;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 50px;
@@ -687,6 +614,9 @@ section#contact .contact-info .phone, .email {
 section#contact .contact-message {
     padding: 1rem;
     flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section#contact .contact-message form {
@@ -762,5 +692,13 @@ section#contact .contact-message input[type="submit"]:hover {
     backdrop-filter: blur(10px);
     border-radius: 50px;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+}
 
+@media screen and (max-width: 768px) {
+    section#contact .sub-container {
+        padding: 0 2rem;
+    }
+    .footer p {
+        bottom: 150px;
+    }
 }
