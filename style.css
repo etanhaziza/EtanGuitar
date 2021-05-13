@@ -34,6 +34,13 @@ body {
     max-width: 768px;
     }
 }
+
+@media screen and (max-width: 500px) { 
+    .sub-container {
+    padding: 2rem 1rem;
+    max-width: 500px;
+    }
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -193,6 +200,31 @@ section#home .CTA .button:hover{
         font-size: 2rem;
     }
 }
+
+@media screen and (max-width: 500px) {
+    section#home {
+        background: url(img/guitar2darkcropped2.jpg) no-repeat left center/cover;
+        justify-content: flex-start;
+    }
+    section#home h1 {
+        font-size: 3.5rem;
+        margin-top: 11rem;
+        margin-bottom: 2rem;
+    }
+    
+    section#home h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 60%;
+    }
+    section#home p {
+        color: white;
+        font-size: 1.5rem;
+    }
+    section#home .CTA {
+        bottom: 15%;
+    }
+}
 /* Lessons Section */
 
 section#lessons {
@@ -204,7 +236,7 @@ section#lessons {
 }
 
 section#lessons h1 {
-    color: white;
+    color: white;e
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -280,6 +312,13 @@ section#lessons .subtitle p {
 }
 
 @media screen and (max-width: 768px) { 
+    section#lessons {
+        background-color: #2d5986;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
     section#lessons h1 {
         font-size: 3.5rem;
         margin-top: 2rem;
@@ -320,15 +359,79 @@ section#lessons .subtitle p {
     }
 }
 
+@media screen and (max-width: 500px) { 
+    section#lessons h1 {
+        font-size: 2.25rem;
+        padding-top: 3rem;
+    }
+    section#lessons h2 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    section#lessons p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    section#lessons .subtitle p {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    .box-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .box-1 .text {
+        flex-basis: none;
+        align-self: center;
+        padding: 0;
+    }
+    .box-1 .text p {
+        text-align: center;
+    }
+    .box-1 .lessons-image {
+        margin-bottom: 2rem;
+    }
+    .box-1 .lessons-image img {
+        width: 100%;
+    }
+    .box-2 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .box-2 .text {
+        flex-basis: none;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .box-2 .text p {
+        text-align: center;
+    }
+    .box-2 .text h2 {
+        text-align: center;
+    }
+    .box-2 .lessons-image {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
 /* About section */
 
 section#about {
-    background-color: #fceea7;
+    background-color: #eae5e5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -371,7 +474,7 @@ section#about::after {
     top: -30px;
     right: 0;
     left: 0;
-    background: #fceea7;
+    background: #eae5e5;
     transform: skewY(3deg);
     -webkit-transform: skewY(3deg);
     -moz-transform: skewY(3deg);
@@ -409,6 +512,30 @@ section#about::after {
         align-self: center;
     }
 }    
+
+@media screen and (max-width: 500px) {   
+    section#about h1 {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+    .about-box {
+        display: flex;
+        width: auto;
+        margin-bottom: 2rem;
+    }
+    section#about p {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+        letter-spacing: 1.25px;
+    }
+    .about-box .heropic {
+        padding-right: 0rem;
+    }
+    .about-box .heropic img {
+        width: 100%;
+    }
+}    
+
 /* Testimonial section */
 
 section#testimonials {
@@ -554,6 +681,109 @@ section#testimonials .quote4:hover q {
     }
 }
 
+@media screen and (max-width: 500px) {
+    section#testimonials {
+        background-color: #2d5986;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0rem;
+    }
+    
+    section#testimonials h1 {
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        padding: 0;
+        margin: 3rem 0;
+    }
+    
+    section#testimonials q {
+        quotes: "“" "”" "‘" "’";
+        color: RGBA(255,255,255,0.69);
+        color: white;
+        font-style: italic;
+        font-size: 1.15rem;
+        text-align: center;
+        margin: 1rem 0;
+        padding: 0 0;
+        transition: .5s;
+    }
+    
+    section#testimonials p {
+        color: RGBA(255,255,255,0.69);
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    section#testimonials .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    section#testimonials .row span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+    
+    section#testimonials .quote1 {
+        height: 500px;
+        width: 100%;
+        margin-right: 0rem;
+        margin-bottom: 1rem;
+        background-image: url(img/parents/1.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow:hidden;
+    }
+    
+    
+    section#testimonials .quote2 {
+        height: 300px;
+        width: 100%;
+        background-image: url(img/parents/2.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    section#testimonials .quote3 {
+        height: 300px;
+        width: 100%;
+        margin-right: 0rem;
+        background-image: url(img/parents/3.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    section#testimonials .quote4 {
+        height: 300px;
+        width: 600px;
+        background-image: url(img/parents/4.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+}
 /* contact section */
 
 section#contact {
