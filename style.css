@@ -208,8 +208,8 @@ section#home .CTA .button:hover{
     }
     section#home h1 {
         font-size: 3.5rem;
-        margin-top: 11rem;
-        margin-bottom: 2rem;
+        margin-top: 12rem;
+        margin-bottom: 4rem;
     }
     
     section#home h2 {
@@ -236,7 +236,7 @@ section#lessons {
 }
 
 section#lessons h1 {
-    color: white;e
+    color: white;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -361,7 +361,7 @@ section#lessons .subtitle p {
 
 @media screen and (max-width: 500px) { 
     section#lessons h1 {
-        font-size: 2.25rem;
+        font-size: 3rem;
         padding-top: 3rem;
     }
     section#lessons h2 {
@@ -371,6 +371,7 @@ section#lessons .subtitle p {
     }
     section#lessons p {
         font-size: 1.5rem;
+        letter-spacing: 1.25px;
         margin-bottom: 1rem;
     }
     section#lessons .subtitle p {
@@ -550,7 +551,8 @@ section#testimonials h1 {
     text-align: center;
     font-size: 3rem;
     color: white;
-    padding: 2rem 0 5rem 0;
+    margin: 2rem 0;
+   
 }
 
 section#testimonials q {
@@ -687,26 +689,23 @@ section#testimonials .quote4:hover q {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 0rem;
+        padding: 0 5rem 0rem 0rem;
     }
     
     section#testimonials h1 {
         text-align: center;
-        font-size: 2rem;
+        font-size: 3rem;
         color: white;
-        padding: 0;
-        margin: 3rem 0;
+        padding-top: 2rem;
+        margin-right: 2rem;
     }
     
     section#testimonials q {
         quotes: "“" "”" "‘" "’";
-        color: RGBA(255,255,255,0.69);
         color: white;
         font-style: italic;
         font-size: 1.15rem;
         text-align: center;
-        margin: 1rem 0;
-        padding: 0 0;
         transition: .5s;
     }
     
@@ -714,14 +713,13 @@ section#testimonials .quote4:hover q {
         color: RGBA(255,255,255,0.69);
         text-align: center;
         font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     section#testimonials .row {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
     }
     
     section#testimonials .row span {
@@ -731,25 +729,26 @@ section#testimonials .quote4:hover q {
     }
     
     section#testimonials .quote1 {
-        height: 500px;
-        width: 100%;
+        height: auto;
+        width: auto;
         margin-right: 0rem;
         margin-bottom: 1rem;
         background-image: url(img/parents/1.jpg);
         background-position: center;
         background-size: cover;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow:hidden;
+        overflow: hidden;
     }
     
     
     section#testimonials .quote2 {
-        height: 300px;
-        width: 100%;
+        height: auto;
+        width: auto;
+        margin-bottom: 1rem;
+        margin-right: 0rem;
         background-image: url(img/parents/2.jpg);
         background-position: center;
         background-size: cover;
@@ -760,9 +759,10 @@ section#testimonials .quote4:hover q {
     }
     
     section#testimonials .quote3 {
-        height: 300px;
-        width: 100%;
+        height: auto;
+        width: auto;
         margin-right: 0rem;
+        margin-bottom: 1rem;
         background-image: url(img/parents/3.jpg);
         background-position: center;
         background-size: cover;
@@ -773,8 +773,9 @@ section#testimonials .quote4:hover q {
     }
     
     section#testimonials .quote4 {
-        height: 300px;
-        width: 600px;
+        height: auto;
+        width: auto;
+        margin-right: 0rem;
         background-image: url(img/parents/4.jpg);
         background-position: center;
         background-size: cover;
@@ -782,6 +783,10 @@ section#testimonials .quote4:hover q {
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
+    }
+    section#testimonials .row:last-child {
+        display: flex;
+        margin-bottom: 0rem;
     }
 }
 /* contact section */
@@ -930,5 +935,53 @@ section#contact .contact-message input[type="submit"]:hover {
     }
     .footer p {
         bottom: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#contact .sub-container {
+        padding: 1rem;
+    }
+    section#contact {
+        height: auto;
+        position: relative;
+        flex-direction: column;
+    }
+    section#contact h1 {
+        margin-bottom: 1rem;
+    }
+    section#contact h2 { 
+       text-align: center;
+       font-size: 1.25rem;
+       margin-bottom: 1.25rem;
+    }
+    section#contact .contactbox {
+        flex-direction: column;
+        margin: 8rem 0rem;
+    }
+    
+    section#contact .contact-info i {
+        padding: 0 1rem;
+        color: white;
+        font-size: 1.5rem;
+    }
+    section#contact .contact-info p {
+        font-family: 'Lato', sans-serif;
+        color: white;
+        font-size: 1.25rem;
+    }
+    section#contact .contact-message form {
+        padding-right: 1rem;
+    }
+    section#contact .contact-message input[type="submit"] {
+        width: 100%;
+        font-size: 1.25rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+    .footer p {
+        bottom: 70px;
     }
 }
