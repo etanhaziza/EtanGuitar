@@ -28,19 +28,6 @@ body {
     max-width: 1000px;
 }
 
-@media screen and (max-width: 768px) { 
-    .sub-container {
-    padding: 5rem 6rem;
-    max-width: 768px;
-    }
-}
-
-@media screen and (max-width: 500px) { 
-    .sub-container {
-    padding: 2rem 1rem;
-    max-width: 500px;
-    }
-}
 .navbar {
     position: fixed;
     top: 0;
@@ -78,7 +65,7 @@ body {
 }
 
 section {
-    width: 100%;
+    /* width: 100%; */
 }
 
 
@@ -87,7 +74,6 @@ section {
     0% {
         transform: translateX(-150%);
     }
-
     100% {
         transform: translateX(0);
     }
@@ -97,7 +83,6 @@ section {
     0% {
         transform: translateX(150%);
     }
-
     100% {
         transform: translateX(0);
     }
@@ -107,7 +92,6 @@ section {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -179,52 +163,8 @@ section#home .CTA .button  {
 section#home .CTA .button:hover{
     padding: 9px 28px;
     transition: .25s;
-    /* font-weight: 400; */
 }
 
-@media screen and (max-width: 768px) {
-    section#home {
-        background: url(img/guitar2darkcropped2.jpg) no-repeat left center/cover;
-    }
-    section#home h1 {
-        font-size: 6rem;
-    }
-    
-    section#home h2 {
-        font-size: 2.5rem;
-        font-weight: normal;
-        width: 60%;
-    }
-    section#home p {
-        color: white;
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    section#home {
-        background: url(img/guitar2darkcropped2.jpg) no-repeat left center/cover;
-        justify-content: flex-start;
-    }
-    section#home h1 {
-        font-size: 3.5rem;
-        margin-top: 12rem;
-        margin-bottom: 4rem;
-    }
-    
-    section#home h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        width: 60%;
-    }
-    section#home p {
-        color: white;
-        font-size: 1.5rem;
-    }
-    section#home .CTA {
-        bottom: 15%;
-    }
-}
 /* Lessons Section */
 
 section#lessons {
@@ -265,7 +205,6 @@ section#lessons .subtitle p {
 .box-1 {
     display: flex;
     justify-content: center;
-    width: 1000px;
     margin: 6rem 0;
 }
 
@@ -284,7 +223,6 @@ section#lessons .subtitle p {
 
 .box-2 {
     display: flex;
-    width: 1000px;
     margin: 6rem 0;
 }
 
@@ -311,136 +249,23 @@ section#lessons .subtitle p {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 768px) { 
-    section#lessons {
-        background-color: #2d5986;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-    }
-    section#lessons h1 {
-        font-size: 3.5rem;
-        margin-top: 2rem;
-    }
-    .box-1 {
-        align-items: center;
-        width: 768px;
-        margin: 2rem 2rem;
-    }
-    .box-1 .text {
-        flex-basis: 100%;
-        padding-right: 4rem;
-    }
-    .box-1 .lessons-image {
-        width: 100%;
-    }
-    .box-1 .lessons-image img {
-        border-radius: 10px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-        width: 90%;
-    }
-    .box-2 {
-        align-items: center;
-        width: 768px;
-        margin: 2rem 2rem;
-    }
-    .box-2 .text {
-        flex-basis: 100%;
-        padding-right: 0rem;
-    }
-    .box-2 .lessons-image {
-        width: 100%;
-        padding-right: 4rem;
-    }
-    
-    .box-2 .lessons-image img {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 500px) { 
-    section#lessons h1 {
-        font-size: 3rem;
-        padding-top: 3rem;
-    }
-    section#lessons h2 {
-        font-size: 2rem;
-        padding-bottom: 1rem;
-        text-align: center;
-    }
-    section#lessons p {
-        font-size: 1.5rem;
-        letter-spacing: 1.25px;
-        margin-bottom: 1rem;
-    }
-    section#lessons .subtitle p {
-        text-align: center;
-        font-size: 1.5rem;
-        padding: 0;
-        margin-bottom: 2rem;
-    }
-    .box-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        margin: 2rem 0;
-    }
-    .box-1 .text {
-        flex-basis: none;
-        align-self: center;
-        padding: 0;
-    }
-    .box-1 .text p {
-        text-align: center;
-    }
-    .box-1 .lessons-image {
-        margin-bottom: 2rem;
-    }
-    .box-1 .lessons-image img {
-        width: 100%;
-    }
-    .box-2 {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        width: 100%;
-        margin: 2rem 0;
-    }
-    .box-2 .text {
-        flex-basis: none;
-        padding-right: 0;
-        margin-right: 0;
-    }
-    .box-2 .text p {
-        text-align: center;
-    }
-    .box-2 .text h2 {
-        text-align: center;
-    }
-    .box-2 .lessons-image {
-        width: 100%;
-        padding-right: 0;
-        margin-bottom: 2rem;
-    }
-}
 /* About section */
 
 section#about {
-    background-color: #eae5e5;
+    background-color: rgb(228, 218, 207);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 100vh;
 }
 
 section#about h1 {
     color: #3c3c3b;
     text-align: center;
-    font-size: 3rem;
-    margin: 2rem 0;
+    font-size: 4rem;
+    margin-bottom: 5rem;
 }
 
 section#about p {
@@ -449,7 +274,7 @@ section#about p {
 }
 .about-box {
     display: flex;
-    width: 900px;
+    align-items: center;
 }
 
 .about-box .heropic {
@@ -475,68 +300,14 @@ section#about::after {
     top: -30px;
     right: 0;
     left: 0;
-    background: #eae5e5;
+    background: rgb(228, 218, 207);
     transform: skewY(3deg);
     -webkit-transform: skewY(3deg);
     -moz-transform: skewY(3deg);
     -ms-transform: skewY(3deg);
 }
 
-@media screen and (max-width: 768px) {
-    section#about {
-        justify-content: flex-start;
-        margin-bottom: 0;
-        position: relative;
-    }
-    
-    section#about h1 {
-        color: #3c3c3b;
-        text-align: center;
-        font-size: 3rem;
-        margin: 1rem 0 3 rem 0;
-    }
-    
-    section#about p {
-        padding: 0 8rem;
-        color: #3c3c3b;
-        font-size: 1.25rem;
-        text-align: center;
-    }
-    .about-box {
-        flex-direction: column;
-        width: 768px;
-    }
-    
-    .about-box .heropic {
-        padding-right: 0;
-        margin-bottom: 2rem;
-        align-self: center;
-    }
-}    
-
-@media screen and (max-width: 500px) {   
-    section#about h1 {
-        font-size: 3rem;
-        padding-top: 2rem;
-    }
-    .about-box {
-        display: flex;
-        width: auto;
-        margin-bottom: 2rem;
-    }
-    section#about p {
-        font-size: 1.25rem;
-        padding: 0 1rem;
-        letter-spacing: 1.25px;
-    }
-    .about-box .heropic {
-        padding-right: 0rem;
-    }
-    .about-box .heropic img {
-        width: 100%;
-    }
-}    
-
+  
 /* Testimonial section */
 
 section#testimonials {
@@ -544,15 +315,14 @@ section#testimonials {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 }
 
 section#testimonials h1 {
     text-align: center;
     font-size: 3rem;
     color: white;
-    margin: 2rem 0;
-   
+    padding: 2rem 0;
 }
 
 section#testimonials q {
@@ -584,8 +354,8 @@ section#testimonials .row span {
 }
 
 section#testimonials .quote1 {
-    height: 300px;
-    width: 600px;
+    height: 350px;
+    width: 60%;
     margin-right: 1rem;
     background-image: url(img/parents/1.jpg);
     background-position: center;
@@ -597,10 +367,9 @@ section#testimonials .quote1 {
     overflow: hidden;
 }
 
-
 section#testimonials .quote2 {
-    height: 300px;
-    width: 383px;
+    height: 350px;
+    width: 40%;
     background-image: url(img/parents/2.jpg);
     background-position: center;
     background-size: cover;
@@ -611,8 +380,8 @@ section#testimonials .quote2 {
 }
 
 section#testimonials .quote3 {
-    height: 300px;
-    width: 383px;
+    height: 350px;
+    width: 40%;
     margin-right: 1rem;
     background-image: url(img/parents/3.jpg);
     background-position: center;
@@ -624,8 +393,8 @@ section#testimonials .quote3 {
 }
 
 section#testimonials .quote4 {
-    height: 300px;
-    width: 600px;
+    height: 350px;
+    width: 60%;
     background-image: url(img/parents/4.jpg);
     background-position: center;
     background-size: cover;
@@ -651,149 +420,10 @@ section#testimonials .quote4:hover q {
     transition: .5s;
 }
 
-@media screen and (max-width: 768px) {
-    section#testimonials {
-        padding: 0 5rem 0rem 1rem;
-    }
-    section#testimonials q {
-        font-size: 1rem;
-        padding: 0rem 2rem;
-        color: white;
-    }
-    section#testimonials p {
-        font-size: 1.25rem;
-    }
-    section#testimonials .quote1 {
-        height: 350px;
-    }
-    section#testimonials .quote2 {
-        height: 350px;
-        margin-right: 2rem;
-    }
-    section#testimonials .quote3 {
-        height: 350px;
-    }
-    section#testimonials .quote4 {
-        margin-right: 2rem;
-        height: 350px;
-    }
-    section#testimonials .row:last-child {
-        display: flex;
-        margin-bottom: 4rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    section#testimonials {
-        background-color: #2d5986;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 5rem 0rem 0rem;
-    }
-    
-    section#testimonials h1 {
-        text-align: center;
-        font-size: 3rem;
-        color: white;
-        padding-top: 2rem;
-        margin-right: 2rem;
-    }
-    
-    section#testimonials q {
-        quotes: "“" "”" "‘" "’";
-        color: white;
-        font-style: italic;
-        font-size: 1.15rem;
-        text-align: center;
-        transition: .5s;
-    }
-    
-    section#testimonials p {
-        color: RGBA(255,255,255,0.69);
-        text-align: center;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    section#testimonials .row {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0rem;
-    }
-    
-    section#testimonials .row span {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-    }
-    
-    section#testimonials .quote1 {
-        height: auto;
-        width: auto;
-        margin-right: 0rem;
-        margin-bottom: 1rem;
-        background-image: url(img/parents/1.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-    
-    
-    section#testimonials .quote2 {
-        height: auto;
-        width: auto;
-        margin-bottom: 1rem;
-        margin-right: 0rem;
-        background-image: url(img/parents/2.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    section#testimonials .quote3 {
-        height: auto;
-        width: auto;
-        margin-right: 0rem;
-        margin-bottom: 1rem;
-        background-image: url(img/parents/3.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    section#testimonials .quote4 {
-        height: auto;
-        width: auto;
-        margin-right: 0rem;
-        background-image: url(img/parents/4.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: hidden;
-    }
-    section#testimonials .row:last-child {
-        display: flex;
-        margin-bottom: 0rem;
-    }
-}
 /* contact section */
 
 section#contact {
     height: 100vh;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -805,9 +435,10 @@ section#contact {
 
 section#contact h1 {
     color: white; 
-    text-align: center;
+    text-align: left;
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 section#contact h2 { 
@@ -817,18 +448,17 @@ section#contact h2 {
 }
 
 section#contact .contactbox {
-    position: relative;
     display: flex;
     justify-content: center;
-    margin: 2rem 0 1rem;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 50px;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5) ;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+    margin: 3rem 0;
 }
 
 section#contact .contact-info {
-    flex-basis: 50%;
+    width: 40%;
     padding: 1rem;
 }
 
@@ -848,7 +478,7 @@ section#contact .contact-info .phone, .email {
 }
 section#contact .contact-message {
     padding: 1rem;
-    flex-basis: 30%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -901,7 +531,6 @@ section#contact .contact-message input[type="submit"] {
     border: 2px solid white;
     border-radius: 10px;
     cursor: pointer;
-    /* padding: 10px 15px; */
     font-family: inherit;
     font-size: inherit;
     transition: .5s;
@@ -919,69 +548,10 @@ section#contact .contact-message input[type="submit"]:hover {
 }
 
 .footer p {
-    position: absolute;
-    bottom: 10px;
     color: white;
     padding: .5rem 3rem;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 50px;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width: 768px) {
-    section#contact .sub-container {
-        padding: 0 2rem;
-    }
-    .footer p {
-        bottom: 150px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    section#contact .sub-container {
-        padding: 1rem;
-    }
-    section#contact {
-        height: auto;
-        position: relative;
-        flex-direction: column;
-    }
-    section#contact h1 {
-        margin-bottom: 1rem;
-    }
-    section#contact h2 { 
-       text-align: center;
-       font-size: 1.25rem;
-       margin-bottom: 1.25rem;
-    }
-    section#contact .contactbox {
-        flex-direction: column;
-        margin: 8rem 0rem;
-    }
-    
-    section#contact .contact-info i {
-        padding: 0 1rem;
-        color: white;
-        font-size: 1.5rem;
-    }
-    section#contact .contact-info p {
-        font-family: 'Lato', sans-serif;
-        color: white;
-        font-size: 1.25rem;
-    }
-    section#contact .contact-message form {
-        padding-right: 1rem;
-    }
-    section#contact .contact-message input[type="submit"] {
-        width: 100%;
-        font-size: 1.25rem;
-    }
-    .footer {
-        display: flex;
-        justify-content: center;
-    }
-    .footer p {
-        bottom: 70px;
-    }
 }
