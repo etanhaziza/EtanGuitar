@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=lato:wght@300;400;700;900&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=roboto:wght@300;400;700;900&display=swap');
@@ -23,6 +21,12 @@ h1, h2, h3 {
 p, a {
     font-family: 'roboto', sans-serif;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -30,11 +34,6 @@ p, a {
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
-}
-
-.sub-container {
-    padding: 4rem 6rem;
-    max-width: 1000px;
 }
 
 .navbar {
@@ -73,11 +72,6 @@ p, a {
     color: skyblue;
 }
 
-section {
-    /* width: 100%; */
-}
-
-
 /* Animations */ 
 @keyframes slideInFromLeft {
     0% {
@@ -115,7 +109,6 @@ section#home {
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
 }
 section#home h1 {
     color: white;
@@ -131,7 +124,7 @@ section#home h1 span {
 
 section#home h2 {
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: normal;
     width: 60%;
     animation: slideInFromRight 1s ease-in-out;
@@ -147,10 +140,7 @@ section#home p {
 }
 
 section#home .CTA {
-   position: absolute;
-   left: 0;
-   right: 0;
-   bottom: 20%;
+   margin-top: 3rem; 
    animation: fadeIn 1s;
    animation-delay: 2s;
    animation-fill-mode: backwards;
@@ -163,7 +153,7 @@ section#home .CTA .button  {
     padding: 8px 25px;
     background-color: transparent;
     border: 2px solid white;
-    border-radius: 45px;
+    border-radius: 38.5pt;
     font-size: 1.2rem;
     font-weight: 300;
     text-decoration: none;
@@ -171,6 +161,7 @@ section#home .CTA .button  {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
     cursor: pointer;
     transition: .25s;
+   
 }
 
 section#home .CTA .button:hover{
@@ -179,6 +170,29 @@ section#home .CTA .button:hover{
     color: #19797E;
 }
 
+@media all and (max-width: 750px) {
+    section#home {
+        background: url(img/guitar2darkcropped2.jpg) no-repeat center left/cover; 
+    }
+    section#home h1 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 4rem 0;
+    }
+    section#home h1 span {
+        font-weight: 300;
+    }
+    section#home h2 {
+        color: white;
+        font-size: 2rem;
+        font-weight: normal;
+        width: 80%;
+        animation: slideInFromRight 1s ease-in-out;
+        animation-delay: .5s;
+        animation-fill-mode: backwards;
+    }
+}  
 /* Lessons Section */
 
 section#lessons {
@@ -187,12 +201,23 @@ section#lessons {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    padding: 4rem 6rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
 section#lessons h1 {
     color: #19797E;
     font-size: 3rem;
     text-align: center;
+    margin: 2rem 0;
+}
+
+section#lessons .subtitle p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 8rem;
+    margin-bottom: 3rem;
 }
 
 section#lessons h2 {
@@ -207,28 +232,37 @@ section#lessons p {
    
 }
 
-section#lessons .subtitle p {
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 0 8rem;
-    margin-bottom: 2rem;
-}
 .box-1 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 0 2rem;
     margin-bottom: 2rem;
 }
 
+.box-1 .lessons-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-1 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .box-1 .lessons-image img {
-    border-radius: 10px;
+    border-radius: 38.5pt;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box-1  > * {
+    flex-basis: 100%;
 }
 
 .box-1 > * + * {
     margin-left: 2rem;
 }
+
 .box-2 {
     display: flex;
     justify-content: center;
@@ -236,25 +270,104 @@ section#lessons .subtitle p {
     margin-bottom: 2rem;
 }
 
-.box-2 .text h2 {
+.box-2 .lessons-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: right;
 }
 
-.box-2 .text p {
-    text-align: right;
-}
 .box-2 .lessons-image img {
-    border-radius: 10px;
+    border-radius: 38.5pt;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box-2  > * {
+    flex-basis: 100%;
 }
 
 .box-2 > * + * {
     margin-left: 2rem;
 }
+@media all and (max-width: 1000px) {
+    section#lessons { 
+        padding: 4rem 2rem;  
+    }
+    section#lessons .subtitle p {
+        padding: 0 0rem;
+        margin-bottom: 3rem;
+    } 
+}
+
+@media all and (max-width: 750px) {
+    section#lessons { 
+        padding: 4rem 1rem;  
+    }
+    section#lessons h1 {
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
+        letter-spacing: .5px;
+    }
+    section#lessons .subtitle p {
+    text-align: justify;
+    text-align-last: center;
+    letter-spacing: .5px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+    section#lessons h2 {
+        font-size: 1.75rem;
+        letter-spacing: .5px;
+        text-align: center;
+    }
+    section#lessons p {
+        letter-spacing: .5px;
+        text-align: justify;
+        text-align-last: center;
+    }
+    .box-1 {
+        flex-direction: column-reverse;
+        padding: 0 0rem;
+    }
+    .box-1 .lessons-image {
+        margin-bottom: 1rem;
+    }
+    .box-1 .text {
+        text-align: justify;
+        text-align-last: center;
+        margin-bottom: 2rem;
+    }
+    .box-1 > * + * {
+        margin-left: 0rem;
+    }
+    .box-2 {
+        flex-direction: column;
+        padding: 0 0rem;
+    }
+    .box-2 .lessons-image {
+        margin-bottom: 2rem;
+    }
+    .box-2 .text {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        text-align-last: center;
+        margin-bottom: 2rem;
+    }
+    .box-2 > * + * {
+        margin-left: 0rem;
+    }
+}
+
 /* About section */
 
 section#about {
-    background: url(img/etanlarge.jpg);
+    background: url(img/etan2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -266,8 +379,7 @@ section#about h1 {
     font-weight: 400;
     color: white;
     text-align: center;
-    margin-bottom: 3rem;
-    padding-top: 4rem;
+    padding-top: 10rem;
 }
 
 section#about p {
@@ -287,6 +399,37 @@ section#about .left-text{
     height: 60vh;
 }
 
+@media all and (max-width: 1000px) {
+    section#about h1 {
+        padding-top: 12rem;
+    }
+    section#about .left-text{
+        height: 65vh;
+    }
+}
+
+@media all and (max-width: 750px) {
+
+    section#about {
+        background: url(img/etan2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    section#about h1 {
+        padding-top: 3rem;
+        margin-bottom: 10rem;
+    }
+    section#about .left-text{
+        color: white;  
+        display: flex;
+        padding: 0 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+}
 /* Testimonial section */
 
 section#testimonials {
@@ -317,7 +460,7 @@ section#testimonials .quote1 {
     width: 45%;
     margin-bottom: 2rem;
     margin-right: 2rem;
-    background-image: url(img/christian.jpg);
+    background-image: url(img/parents/christian.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -326,21 +469,21 @@ section#testimonials .quote1 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 section#testimonials .quote2 {
     height: 500px;
     width: 45%;
     margin-bottom: 2rem;
-    background-image: url(img/parents/2.jpg);
+    background-image: url(img/parents/paul.jpeg);
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 section#testimonials .quote3 {
@@ -355,7 +498,7 @@ section#testimonials .quote3 {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 section#testimonials .quote4 {
@@ -369,14 +512,14 @@ section#testimonials .quote4 {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 section#testimonials q {
     quotes: "“" "”" "‘" "’";
-    color: RGBA(255,255,255,0.69);
+    color: white;
     font-style: italic;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     text-align: center;
     margin: 1rem 0;
     padding: 0 4rem;
@@ -384,7 +527,7 @@ section#testimonials q {
 }
 
 section#testimonials p {
-    color: RGBA(255,255,255,0.69);
+    color: white;
     text-align: center;
     font-size: 1.5rem;
 }
@@ -405,8 +548,7 @@ section#testimonials .quote1:hover q,
 section#testimonials .quote2:hover q,
 section#testimonials .quote3:hover q,
 section#testimonials .quote4:hover q {
-    transform: scale(1.02);
-    color: white;
+    transform: scale(1.05);
     transition: .5s;
 }
 
@@ -417,10 +559,11 @@ section#contact {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(img/guitar2darkcropped2.jpg);
+    background: url(img/guitar2darkcropped2.jpg);
     background-size: cover;
     background-position: center;
-    
+    height: 100vh;
+    padding: 0rem 6rem;
 }
 
 section#contact h1 {
@@ -444,7 +587,7 @@ section#contact .contactbox {
     backdrop-filter: blur(10px);
     border-radius: 50px;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
-    margin-top: 3rem;
+    max-width: 1000px;
 }
 
 section#contact .contact-info {
@@ -519,7 +662,7 @@ section#contact .contact-message input[type="submit"] {
     color: white;
     background: transparent;
     border: 2px solid white;
-    border-radius: 45px;
+    border-radius: 38.5pt;
     cursor: pointer;
     font-family: 'lato', sans-serif;
     font-size: inherit;
