@@ -229,7 +229,6 @@ section#lessons h2 {
 section#lessons p {
     color: #423f3f;
     font-size: 1.25rem;
-   
 }
 
 .box-1 {
@@ -248,6 +247,7 @@ section#lessons p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 .box-1 .lessons-image img {
@@ -279,7 +279,7 @@ section#lessons p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: right;
+    text-align: center;
 }
 
 .box-2 .lessons-image img {
@@ -367,68 +367,52 @@ section#lessons p {
 /* About section */
 
 section#about {
-    background: url(img/etan2.jpg);
+    background: rgb(229, 229, 229);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
+    padding: 5rem;
 }
 
-section#about h1 {
-    font-size: 4rem;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    padding-top: 10rem;
-}
-
-section#about p {
-    font-size: 1.25rem;
-    letter-spacing: 1.5px;
-    color: white;
-    text-align: center;
-    max-width: 1000px;
-}
-
-section#about .left-text{
-    color: white;  
+section#about .hero {
     display: flex;
-    padding: 0 4rem;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
-    height: 60vh;
+    padding-bottom: 2rem;
+    position: relative;
+    width: 100%;
+}   
+
+section#about .hero .heropic img {
+    width: 100%;
 }
 
-@media all and (max-width: 1000px) {
-    section#about h1 {
-        padding-top: 12rem;
-    }
-    section#about .left-text{
-        height: 65vh;
-    }
+section#about .hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 40%;
+    font-weight: 200;
+    letter-spacing: 6px;
+    border: 1px solid white;
+    text-align: center;
+    padding: .5rem 0;
+    text-transform: uppercase;
 }
 
-@media all and (max-width: 750px) {
+section#about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    section#about {
-        background: url(img/etan2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-    }
-    section#about h1 {
-        padding-top: 3rem;
-        margin-bottom: 10rem;
-    }
-    section#about .left-text{
-        color: white;  
-        display: flex;
-        padding: 0 1rem;
-        justify-content: center;
-        align-items: center;
-        text-align: justify;
-    }
+section#about .row .box {
+    padding: 1rem 2rem;
+    text-align: center;
 }
 /* Testimonial section */
 
